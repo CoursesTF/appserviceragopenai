@@ -1,5 +1,5 @@
 @description('The location used for all resources')
-param location string = resourceGroup().location
+param location string = 'swedencentral'
 
 @description('Name used for the deployment environment')
 param environmentName string
@@ -33,7 +33,7 @@ param appServiceName string = 'app-${resourceToken}'
 ])
 param appServicePlanSku string = 'B1'
 
-var appServicePlanLocation = 'canadacentral'
+var appServicePlanLocation = 'swedencentral'
 
 // Create App Service Plan
 resource appServicePlan 'Microsoft.Web/serverfarms@2022-03-01' = {
